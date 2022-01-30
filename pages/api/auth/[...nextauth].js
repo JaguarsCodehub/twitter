@@ -22,7 +22,10 @@ export default NextAuth({
 
             session.user.uid = token.sub;
             return session;
-      }
-  }
+      },
+  },
+  secret: process.env.JWT_SECRET
+
+  
 });
 
